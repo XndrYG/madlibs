@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1 Enter Your Words
+  form(method ="POST" action="/story" id="words")
+    label(for="noun1") Noun:
+    input(type="text" name="noun1" id="noun1" value=`${noun1}`)
+    br
+    label(for="noun2") Plural Noun:
+    input(type="text" name="noun2" id="noun2" value=`${noun2}`)
+    br
+    label(for="verb1") Verb:
+    input(type="text" name="verb1" id="verb1" value=`${verb1}`)
+    br
+    label(for="verb2") Second Verb:
+    input(type="text" name="verb2" id="verb2" value=`${verb2}`)
+    br
+    label(for="adjective1") Adjective:
+    input(type="text" name="adjective1" id="adjective1" value=`${adjective1}`)
+    br
+    label(for="adjective2") Second Adjective:
+    input(type="text" name="adjective2" id="adjective2" value=`${adjective2}`)
+    br
+    label(for="adjective3") Third Adjective:
+    input(type="text" name="adjective3" id="adjective3" value=`${adjective3}`)
+  label(for="storyChoice") Choose One
+  select(form="words" name="storyChoice" id="storyChoice")
+      option(value = "1") A Christmas Morning
+      option(value = "2") First Day of School
+      option(value = "3") Our Cafeteria
+  br
+  button(type="submit" form="words") Tell Me a Story
